@@ -10,12 +10,12 @@ spec:
       app: dstrategies-back
   strategy:
     blueGreen:
-      activeService: <SERVICE_ONLINE>
+      activeService: dstrategies-back-online
       autoPromotionEnabled: false
       prePromotionAnalysis:
         templates:
           - templateName: dstrategies-back-analysis-template
-      previewService: <SERVICE_OFFLINE>
+      previewService: dstrategies-back-offline
   template:
     metadata:
       labels:
@@ -25,7 +25,7 @@ spec:
         - envFrom:
             - configMapRef:
                 name: dstrategies-back-configmap-env-base
-          image: 'quay.io/dseveria/dstrategies-back:V1.0.0'
+          image: "quay.io/dseveria/dstrategies-back:V1.0.0"
           imagePullPolicy: Always
           livenessProbe:
             failureThreshold: 3

@@ -10,7 +10,7 @@ spec:
     - name: dstrategies-back-webmetric
       provider:
         web:
-          jsonPath: '{$.status}'
+          jsonPath: "{$.status}"
           url: >-
-            http://dstrategies-back-offline.<USERNAME>-blue-green.svc.cluster.local:8080/q/health/ready
+            http://dstrategies-back-offline.user04-blue-green.svc.cluster.local:8080/q/health/ready
       successCondition: result == 'UP'
