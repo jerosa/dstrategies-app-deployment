@@ -1,4 +1,4 @@
 service:
   image:
     version: V1.0.0
-domain: <OCP_DOMAIN>
+domain: rollouts.sandbox2312.opentlc.com
